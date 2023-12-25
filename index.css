@@ -8,7 +8,6 @@
 .header {
     width: 100%;
     height: 67px;
-    background: deepskyblue;
     display: grid;
     grid-template-columns: 1fr 2fr;
     border-bottom: 1px solid lightgrey;
@@ -16,7 +15,6 @@
 
 .logo {
     height: 100%;
-    background: blue;
     font-family: 'Kalnia', serif;
     text-align: center;
 
@@ -24,7 +22,6 @@
 
 .nav-bar {
     height: 100%;
-    background: antiquewhite;
 }
 
 .nav-menu {

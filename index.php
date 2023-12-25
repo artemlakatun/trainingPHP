@@ -23,11 +23,13 @@
     </div>
     <div class="nav-bar">
         <ul class="nav-menu">
-            <li><a class="link" href="#">admin panel</a></li>
+            <li><a class="link" href="additional_pages/admin.php">admin panel</a></li>
             <li><a class="link" href="additional_pages/review.php">add a review</a></li>
         </ul>
     </div>
 </header>
-<section class="container"></section>
+<section class="container">
+
+</section>
 </body>
 </html>
