@@ -6,7 +6,6 @@ require_once 'classes/Review.php';
 $stmt = $pdo->query('SELECT id, user_name, subject, text, evaluation FROM review');
 $reviewsData = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Создаем экземпляры класса Review для каждого отзыва
 $reviews = [];
 foreach ($reviewsData as $reviewData) {
     $review = new Review(
@@ -49,7 +48,27 @@ foreach ($reviewsData as $reviewData) {
         </ul>
     </div>
 </header>
-<section class="container">
+<section class="container1">
+    <div class="welcome_preview">
+            <span class="span_welcome_logo_font span1">
+                DO
+            </span><br>
+        <span class="span_welcome_logo_font span2">
+                YOU TEACH
+            </span><br>
+        <span class="span3">
+                PHP  is a common open-source general-purpose programming language. PHP is specifically designed
+                for web development and its code can be embedded directly into HTML.
+            </span>
+        <span class="span_welcome_logo_font span_welcome_logo_padding span4">
+                PHP?
+            </span>
+    </div>
+</section>
+<section class="container2">
+    <h4>Reviews</h4>
+</section>
+<section class="container3">
     <?php foreach ($reviews as $review): ?>
         <div class="review">
             <div class="user-name review-column"><strong>User:</strong> <?= $review->user_name ?></div>
@@ -59,5 +78,8 @@ foreach ($reviewsData as $reviewData) {
         </div>
     <?php endforeach; ?>
 </section>
+<footer class="footer">
+    <p>2023</p>
+</footer>
 </body>
 </html>

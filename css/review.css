@@ -74,6 +74,7 @@ body {
 
 .submit {
     background: white;
+    border: 1px solid rgb(128, 128, 128);
     border-radius: 5px;
     width: 85px;
     height: 30px;
@@ -81,7 +82,7 @@ body {
 }
 
 .submit:hover {
-    background: aqua;
+    background: lightslategrey;
     transition: 0.3s;
 }
 
