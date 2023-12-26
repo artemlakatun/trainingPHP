@@ -74,10 +74,32 @@ body {
 
 .delete-form {
     margin-left: 5px;
+    margin-top: 5px;
 }
 
 .edit {
+    background: darkgray;
+    border: 1px solid lightslategrey;
+    border-radius: 5px;
     margin-left: 5px;
+    cursor: pointer;
+}
+
+.edit:hover {
+    background: lightgrey;
+    transition: 0.3s;
+}
+
+.delete-button {
+    background: red;
+    border: 1px solid firebrick;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.delete-button:hover {
+    background: darkred;
+    transition: 0.3s;
 }
 
 /* footer */

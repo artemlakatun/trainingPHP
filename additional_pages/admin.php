@@ -64,12 +64,12 @@ foreach ($reviewsData as $reviewData) {
                 <input class="subject review-column" type="text" name="subject" value="<?= $review->subject ?>">
                 <input class="text review-column" type="text" name="text" value="<?= $review->text ?>">
                 <input class="evaluation review-column" type="text" name="evaluation" value="<?= $review->evaluation ?>">
-                <input class="edit" type="submit" value="Сохранить изменения">
+                <input class="edit" type="submit" value="Save">
             </form>
 
             <form class="delete-form" action="../request/delete_review.php" method="post">
                 <input type="hidden" name="id" value="<?= $review->id ?>">
-                <input type="submit" value="Удалить">
+                <input class="delete-button" type="submit" value="Delete">
             </form>
         </div>
     <?php
