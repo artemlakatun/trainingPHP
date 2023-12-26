@@ -1,3 +1,24 @@
+<?php
+require_once 'include_db/db.php';
+require_once 'classes/Review.php';
+
+/** @var TYPE_NAME $pdo */ //костыль!
+$stmt = $pdo->query('SELECT id, user_name, subject, text, evaluation FROM review');
+$reviewsData = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Создаем экземпляры класса Review для каждого отзыва
+$reviews = [];
+foreach ($reviewsData as $reviewData) {
+    $review = new Review(
+        $reviewData['id'],
+        $reviewData['user_name'],
+        $reviewData['subject'],
+        $reviewData['text'],
+        $reviewData['evaluation']
+    );
+    $reviews[] = $review;
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,7 +50,14 @@
     </div>
 </header>
 <section class="container">
-
+    <?php foreach ($reviews as $review): ?>
+        <div class="review">
+            <div class="user-name review-column"><strong>User:</strong> <?= $review->user_name ?></div>
+            <div class="subject review-column"><strong>Subject:</strong> <?= $review->subject ?></div>
+            <div class="text review-column"><?= $review->text ?></div>
+            <div class="evaluation review-column"><strong>evaluation:</strong> <?= $review->evaluation ?></div>
+        </div>
+    <?php endforeach; ?>
 </section>
 </body>
 </html>
