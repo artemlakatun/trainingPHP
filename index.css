@@ -369,3 +369,25 @@ body {
     margin: 0;
     padding: 22px;
 }
+
+/* error.php */
+
+.error-h5 {
+    font-size: 32px;
+    text-align: center;
+    color: firebrick;
+}
+
+.error-p-link {
+    text-align: center;
+}
+
+.error-link {
+    text-decoration: none;
+    color: black;
+}
+
+.error-link:hover {
+    color: lightblue;
+    transition: 0.3s;
+}
