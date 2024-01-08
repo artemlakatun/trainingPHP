@@ -78,8 +78,5 @@ foreach ($reviewsData as $reviewData) {
         </div>
     <?php endforeach; ?>
 </section>
-<footer class="footer">
-    <p>2023</p>
-</footer>
-</body>
-</html>
+<?php
+require_once "blocks/footer.php";
