@@ -35,41 +35,41 @@ foreach ($reviewsData as $reviewData) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../index.css">
 </head>
 <body>
-<header class="header">
-    <div class="logo">
+<header class="admin-header">
+    <div class="admin-logo">
         <p>training PHP</p>
     </div>
-    <div class="nav-bar">
-        <ul class="nav-menu">
-            <a class="link" href="../index.php">main page</a>
+    <div class="admin-nav-bar">
+        <ul class="admin-nav-menu">
+            <a class="admin-link" href="../index.php">main page</a>
         </ul>
     </div>
 </header>
-<section class="container">
+<section class="admin-container">
     <?php
     foreach ($reviews as $review):
     ?>
-        <div class="review">
-            <div class="user-name review-column"><strong>User:</strong> <?= $review->user_name ?></div>
-            <div class="subject review-column"><strong>Subject:</strong> <?= $review->subject ?></div>
-            <div class="text review-column"><?= $review->text ?></div>
-            <div class="evaluation review-column"><strong>evaluation:</strong> <?= $review->evaluation ?></div>
+        <div class="admin-review">
+            <div class="admin-user-name admin-review-column"><strong>User:</strong> <?= $review->user_name ?></div>
+            <div class="admin-subject admin-review-column"><strong>Subject:</strong> <?= $review->subject ?></div>
+            <div class="admin-text admin-review-column"><?= $review->text ?></div>
+            <div class="admin-evaluation admin-review-column"><strong>evaluation:</strong> <?= $review->evaluation ?></div>
 
             <form action="../request/edit_review.php" method="post">
                 <input type="hidden" name="id" value="<?= $review->id ?>">
-                <input class="user-name review-column" type="text" name="user_name" value="<?= $review->user_name ?>">
-                <input class="subject review-column" type="text" name="subject" value="<?= $review->subject ?>">
-                <input class="text review-column" type="text" name="text" value="<?= $review->text ?>">
-                <input class="evaluation review-column" type="text" name="evaluation" value="<?= $review->evaluation ?>">
-                <input class="edit" type="submit" value="Save">
+                <input class="admin-user-name admin-review-column" type="text" name="user_name" value="<?= $review->user_name ?>">
+                <input class="admin-subject admin-review-column" type="text" name="subject" value="<?= $review->subject ?>">
+                <input class="admin-text admin-review-column" type="text" name="text" value="<?= $review->text ?>">
+                <input class="admin-evaluation admin-review-column" type="text" name="evaluation" value="<?= $review->evaluation ?>">
+                <input class="admin-edit" type="submit" value="Save">
             </form>
 
-            <form class="delete-form" action="../request/delete_review.php" method="post">
+            <form class="admin-delete-form" action="../request/delete_review.php" method="post">
                 <input type="hidden" name="id" value="<?= $review->id ?>">
-                <input class="delete-button" type="submit" value="Delete">
+                <input class="admin-delete-button" type="submit" value="Delete">
             </form>
         </div>
     <?php
